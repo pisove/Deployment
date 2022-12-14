@@ -1,0 +1,72 @@
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/main_nav.ejs') %>
+<!-- Content for the Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="post">
+
+              <div class="form-group">
+                <label for="nameTextField">Friend's Name</label>
+                <input type="text" class="form-control"
+                id="nameTextField"
+                placeholder="John Smith"
+                name="name" 
+                value="<%= friend.name %>"
+                required>
+              </div> 
+
+              <div class="form-group">
+                <label for="userNameTextField">Username</label>
+                <input type="text" class="form-control"
+                id="userNameTextField"
+                placeholder="jSmith420"
+                name="userName" 
+                value="<%= friend.userName %>"
+                required>
+              </div> 
+
+              <div class="form-group">
+                <label for="Description">Description</label>
+                <input type="text" class="form-control"
+                id="descTextField"
+                placeholder="How did you meet?"
+                name="description" 
+                value="<%= friend.description %>"
+                required>
+              </div> 
+
+              <div class="form-group">
+                <label for="emailTextField">Email</label>
+                <input type="email" class="form-control"
+                id="emailTextField"
+                placeholder="jsmith420@webnscript.com"
+                name="email" 
+                value="<%= friend.email %>"
+                required>                
+                </input>
+              </div> 
+
+              <div class="form-group">
+                <label for="numberTextField">Number</label>
+                <input type="number" class="form-control"
+                id="numberTextField"
+                placeholder="(012)345-6789"
+                name="number" 
+                value="<%= friend.number %>"
+                required>
+              </div> 
+              <br>
+              <button class="btn-btn-primary" type="submit">
+                <i class="fas fa-edit"></i>Submit</button>
+
+              <a href="/friend-list" class="btn btn-warning">
+                <i class="fas fa-undo"></i>Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ('../partials/bottom_nav.ejs') %>
+<%- include ('../partials/footer.ejs')%>
